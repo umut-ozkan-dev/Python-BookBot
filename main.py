@@ -1,13 +1,12 @@
-import stats
+from stats import wordcount, get_book_test, charcount
 
 filepath = "books/frankenstein.txt"
 
 
 def main():
-    file_contents = stats.get_book_test(filepath)
-    print(file_contents)
+    text = get_book_test(filepath)
+    # wordcount(text)
+    print(charcount(text))
 
-
-stats.wordcount(filepath)
 
 main()
