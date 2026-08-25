@@ -6,7 +6,7 @@ def get_book_test(filepath):
 
 def wordcount(text):
     words = text.split()
-    print(f"Found {len(words)} total words")
+    return len(words)
 
 
 def charcount(text):
@@ -18,6 +18,14 @@ def charcount(text):
         else:
             dictionary[c] = 1
 
-    dictionary
-
     return dictionary
+
+
+def print_report(bookpath, word_count):
+    print("========Python-Bookbot========")
+    print(f"Analysis for the book found in: {bookpath}")
+    print("------------------------------")
+    print(f"Word Count: {word_count}")
+    print("------------------------------")
+    print(f"Character Count: { None }")  ## FIX THİS
+    print("=============END==============")
