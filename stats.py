@@ -29,3 +29,6 @@ def print_report(bookpath, word_count):
     print("------------------------------")
     print(f"Character Count: { None }")  ## FIX THİS
     print("=============END==============")
+
+
+
