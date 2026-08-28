@@ -1,3 +1,6 @@
+import string
+
+
 def get_book_test(filepath):
     with open(filepath) as f:
         file_contents = f.read()
@@ -31,4 +34,14 @@ def print_report(bookpath, word_count):
     print("=============END==============")
 
 
+def sort_on(dict_tuple: tuple[str, int]) -> int:
+    return dict_tuple[1]
 
+
+def chars_dict_to_sorted_list(dictionary: dict[str, int]):
+    emptly_list = []
+    for key in dictionary.keys():
+        if key in string.ascii_letters:
+                emptly_list.append((key,dictionary[key]))
+
+    return emptly_list
