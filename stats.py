@@ -24,13 +24,13 @@ def charcount(text):
     return dictionary
 
 
-def print_report(bookpath, word_count):
+def print_report(bookpath, word_count, formatted_sorted_list):
     print("========Python-Bookbot========")
     print(f"Analysis for the book found in: {bookpath}")
     print("------------------------------")
     print(f"Word Count: {word_count}")
     print("------------------------------")
-    print(f"Character Count: { None }")  ## FIX THİS
+    print(f"Character Count:\n{ formatted_sorted_list }")
     print("=============END==============")
 
 
@@ -42,6 +42,15 @@ def chars_dict_to_sorted_list(dictionary: dict[str, int]):
     emptly_list = []
     for key in dictionary.keys():
         if key in string.ascii_letters:
-                emptly_list.append((key,dictionary[key]))
+            emptly_list.append((key, dictionary[key]))
 
     return emptly_list
+
+
+def format_sorted_list(sorted_list):
+    string_word_count = ""
+    for tuple in sorted_list:
+        string_word_count += f"{tuple[0]} : {tuple[1]} \n"
+        
+        
+    return string_word_count
