@@ -10,10 +10,11 @@ python3 main.py <path_to_book>
 
 ```
 <br> 
-<img width="1212" height="686" alt="image" src="https://github.com/user-attachments/assets/19bd03e4-12ab-4b0a-af88-6b8378d4bd76" />
+
+<img width="1244" height="685" alt="image" src="https://github.com/user-attachments/assets/c2363644-c0d7-473d-a41b-8006b96451b2" />
 
 
 
 <br>
 
-<img width="1217" height="732" alt="image" src="https://github.com/user-attachments/assets/51e5f008-2d6a-4f4c-9273-cd5e5f6ca3c9" />
+<img width="1246" height="755" alt="image" src="https://github.com/user-attachments/assets/b9dd96ee-467b-4fdb-be8c-546f8f88b325" />
