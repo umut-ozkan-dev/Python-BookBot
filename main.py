@@ -1,3 +1,4 @@
+import sys
 from stats import (
     wordcount,
     get_book_test,
@@ -9,20 +10,25 @@ from stats import (
     calc_estimated_time,
 )
 
-filepath = "books/frankenstein.txt"
-
 
 def main():
-    """The main function"""
-    text = get_book_test(filepath)
-    word_count = wordcount(text)
-    estimated_time = calc_estimated_time(word_count)
-    charcount(text)
-    new_list = chars_dict_to_sorted_list(charcount(text))
-    sorted_list = sorted(new_list, reverse=True, key=sort_on)
-    formatted_sorted_list = format_sorted_list(sorted_list)
-
-    print_report(filepath, estimated_time, word_count, formatted_sorted_list)
+    print(
+        "CLI Python BookBot Program inputs a book as a text file and outputs analysis of the book."
+    )
+    print("Usage: python3 main.py <path_to_book>")
+    if (len(sys.argv)) == 2:
+        filepath = sys.argv[1]
+        text = get_book_test(filepath)
+        print(sys.argv[0])
+        word_count = wordcount(text)
+        estimated_time = calc_estimated_time(word_count)
+        charcount(text)
+        new_list = chars_dict_to_sorted_list(charcount(text))
+        sorted_list = sorted(new_list, reverse=True, key=sort_on)
+        formatted_sorted_list = format_sorted_list(sorted_list)
+        print_report(filepath, estimated_time, word_count, formatted_sorted_list)
+    else:
+        sys.exit()
 
 
 main()

@@ -15,10 +15,10 @@ def wordcount(text):
 def calc_estimated_time(word_count):
     """Estimated the average adult reads  at a rate of 238 words per minute."""
 
-    total_minutes = round(word_count / 238, 2)
+    total_minutes = round(word_count / 238)
     total_hour = total_minutes // 60
-    remaining_minutes = round(total_minutes - (total_hour * 60))
-    estimated_time = f"{round(total_hour,0)} hours and {remaining_minutes} minutes"
+    remaining_minutes = round((total_minutes - (total_hour * 60)))
+    estimated_time = f"{round(total_hour)} hours and {remaining_minutes} minutes"
     return estimated_time
 
 
