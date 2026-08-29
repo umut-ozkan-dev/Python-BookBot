@@ -12,10 +12,6 @@ from stats import (
 
 
 def main():
-    print(
-        "CLI Python BookBot Program inputs a book as a text file and outputs analysis of the book."
-    )
-    print("Usage: python3 main.py <path_to_book>")
     if (len(sys.argv)) == 2:
         filepath = sys.argv[1]
         text = get_book_test(filepath)
@@ -28,6 +24,10 @@ def main():
         formatted_sorted_list = format_sorted_list(sorted_list)
         print_report(filepath, estimated_time, word_count, formatted_sorted_list)
     else:
+        print(
+            "CLI Python BookBot Program inputs a book as a text file and outputs analysis of the book."
+        )
+        print("Usage: python3 main.py <path_to_book>")
         sys.exit()
 
 
