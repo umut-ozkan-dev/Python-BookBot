@@ -15,7 +15,6 @@ def main():
     if (len(sys.argv)) == 2:
         filepath = sys.argv[1]
         text = get_book_test(filepath)
-        print(sys.argv[0])
         word_count = wordcount(text)
         estimated_time = calc_estimated_time(word_count)
         charcount(text)
